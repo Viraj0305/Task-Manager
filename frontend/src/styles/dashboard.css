@@ -1,0 +1,248 @@
+/* ========== GENERAL ========== */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  height: 60px;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ========== DASHBOARD CONTAINER ========== */
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== BUTTONS ========== */
+.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary:hover {
+  background: #1e40af;
+}
+
+.secondary {
+  background: #9ca3af;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ========== TASK LIST ========== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.task-list li:hover {
+  background: #f1f5f9;
+}
+
+/* LEFT: TITLE */
+.task-left {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* RIGHT: STATUS + PRIORITY + DELETE */
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ========== STATUS BADGE ========== */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.Pending {
+  background: #fde68a;
+  color: #92400e;
+}
+
+.status.In-Progress {
+  background: #bfdbfe;
+  color: #1e40af;
+}
+
+.status.Completed {
+  background: #bbf7d0;
+  color: #166534;
+}
+
+/* ========== PRIORITY BADGE ========== */
+.priority {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority.Low {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.priority.Medium {
+  background: #fde68a;
+  color: #92400e;
+}
+
+.priority.High {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+/* ========== DELETE BUTTON ========== */
+button.delete {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.delete:hover {
+  background: #dc2626;
+}
+
+/* ========== MODAL OVERLAY ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ========== MODAL CARD ========== */
+.modal-card {
+  background: white;
+  width: 420px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-card h3 {
+  margin-bottom: 10px;
+}
+
+.modal-card label {
+  font-size: 13px;
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-card input,
+.modal-card textarea,
+.modal-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-card textarea {
+  min-height: 70px;
+}
+
+/* MODAL ACTIONS */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ROW (STATUS + PRIORITY SELECT) */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* USERS GRID */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.user-card {
+  background: #f3f4f6;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.user-card:hover {
+  background: #e5e7eb;
+}
+
+.user-card h4 {
+  margin-bottom: 4px;
+}
